@@ -2,9 +2,26 @@
     box-sizing: border-box;
     font-family: "Roboto", arial;
     font-weight: 400;
+    text-decoration: none;
 }
 body {
     margin: 0;
+    padding: 0;
+}
+.profile {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    background-color: #aaa;
+}
+.header {
+    width: 95vw;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin-left: 0;
 }
 .thumbmail, .channel-icon {
     width: calc(20vw - 0);
@@ -22,6 +39,10 @@ body {
     border-top: none;
 }
 .video-container {
+    min-width: 250px;
+    width: 100%;
+    margin: 0 0 2rem 0;
+    padding: 0.5rem;
     display: flex;
     flex-direction: column;
 }
@@ -83,8 +104,8 @@ body {
 }
 .categories {
     padding: 1rem 2rem;
-    border-top: 1px solid #999;
-    border-bottom: 1px solid #999;
+    border-top: #1a1a1a;
+    border-bottom: #555;
 }
 .category {
     padding: 1rem 1rem;
@@ -96,13 +117,17 @@ body {
     font-size: inherit;
     cursor: pointer;
     background-color: #e7e7e7;
-    transition: 150ms;
+    transition: background-color 0.15s;
+}
+.active {
+    background-color: #777;
+    width: 100px;
 }
 .category:hover {
     background-color: #ddd;
 }
 .category:active {
-    background-color: #606060;
+    background-color: #777;
     color: white;
     border-color: #eee;
 }
@@ -111,7 +136,11 @@ body {
 }
 .category-section {
     display: flex;
+    justify-content: center;
     overflow: hidden;
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    padding: 1rem 0;
 }
 header {
     display: flex;
@@ -121,4 +150,40 @@ header {
 }
 .youtube-logo {
     height: 100px;
+}
+.search-bar {
+    display: flex;
+    flex-grow: 1;
+    margin: 0 2rem 0 1rem;
+}
+.search-bar input {
+    outline: none;
+}
+.search-btn {
+    display: flex;
+    align-items: center;
+    padding: 0 1.25rem;
+    border: 1px solid #777;
+    background-color: #f8f8f8;
+    border-left: none;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.search-input {
+    width: 100%;
+    font-size: inherit;
+    padding: .4rem;
+    border: 1px solid #777;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    cursor: pointer;
+}
+.search-btn:hover {
+    background-color: #f0f0f0;
+}
+.menu-icons {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    align-items: center;
+    gap: 1.5rem;
 }
